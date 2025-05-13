@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Distributor</title>
+    <!-- 
+      Card Distributor - Main HTML File
+      
+      This application distributes a standard 52-card deck among a specified number of players.
+      It uses a PHP backend to handle the card distribution logic and JavaScript for the UI.
+      
+      Minimum supported environment: Modern browsers with ES6 support
+      
+      @author Khalis Ramni
+    -->
+    <style>
+      /* General Page Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Input Section (Now scrolls with the page) */
+      .input-container {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        margin-bottom: 20px; /* Space before output */
+      }
+
+      h2 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      /* Input and Button */
+      input {
+        width: 80%;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      button {
+        background: #28a745;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #218838;
+        transform: scale(1.05);
+      }
+
+      /* Output Section */
+      .output-container {
+        width: 90%;
+        max-width: 500px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Player Display */
+      .player {
+        font-weight: bold;
+        margin-top: 10px;
+        color: #007bff;
+      }
+
+      /* Card Display */
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 5px;
+      }
+
+      .card-img {
+        width: 50px;
+        height: auto;
+        margin: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s;
+      }
+
+      .card-img:hover {
+        transform: scale(1.1);
+      }
+
+      /* Fade-in Animation */
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Loading indicator */
+      #loading {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 15px 20px;
+        border-radius: 5px;
+        z-index: 1000;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 480px) {
+        .input-container,
+        .output-container {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Input Section -->
+    <div class="input-container">
+      <h2>Card Distributor</h2>
+      <input
+        type="number"
+        id="players"
+        min="1"
+        placeholder="Enter number of players"
+        aria-label="Number of players"
+      />
+      <button onclick="distributeCards()">Distribute</button>
+    </div>
+
+    <!-- Output Section -->
+    <div class="output-container" id="output"></div>
+
+    <!-- JavaScript for handling user interactions -->
+    <script src="funcDistCard.js"></script>
+  </body>
+</html>
