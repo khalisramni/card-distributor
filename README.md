@@ -62,6 +62,30 @@ The application handles the following irregular situations:
 
 When an irregularity occurs, the application displays an "Irregularity occurred" message and terminates the process.
 
+## Development Information
+
+### Time Spent on Development
+
+This project was developed over the course of [insert your time period, e.g., "2 weeks" or "40 hours"]. The development time was distributed as follows:
+
+- Planning and design: [45 minutes]
+- Frontend development (HTML/CSS/JS): [1 hours]
+- Backend development (PHP): [1 hours]
+- Testing and debugging: [30 minutes]
+- Documentation: [30 minutes]
+
+Total development time: [3 hours 45 minutes]
+
+### Development Process
+
+The application was developed using an iterative approach:
+1. Initial planning and wireframing
+2. Core functionality implementation
+3. UI design and implementation
+4. Error handling and edge cases
+5. Testing and refinement
+6. Documentation
+
 ## Development Notes
 
 - The application uses vanilla JavaScript compatible with modern browsers
