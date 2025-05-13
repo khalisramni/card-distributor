@@ -50,7 +50,7 @@ This application complies with the following minimum supported environment:
 - `LetsPlayCard.html` - Main HTML file with UI
 - `funcDistCard.js` - JavaScript for handling user interactions and API calls
 - `backend.php` - PHP backend for card distribution logic
-- `cards/` - Directory containing card images (not included in repository)
+- `cards/` - Directory containing card images
 
 ## Error Handling
 
